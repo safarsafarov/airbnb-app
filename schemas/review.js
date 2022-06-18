@@ -3,30 +3,35 @@ export default {
     title: 'Review',
     type: 'object',
     fields: [
-        {
-            name: 'reviewDescription',
-            title: 'Review Description',
-            type: 'string',
+      {
+        name: 'reviewDescription',
+        title: 'Review Description',
+        type: 'string',
+      },
+      {
+        name: 'traveller',
+        title: 'Traveller',
+        type: 'traveller',
+      },
+      {
+        name: 'rating',
+        title: 'Rating',
+        type: 'string',
+        options: {
+          list: [
+            { title: '5 Stars', value: '5-stars' },
+            { title: '4 Stars', value: '4-stars' },
+            { title: '3 Stars', value: '3-stars' },
+            { title: '2 Stars', value: '2-stars' },
+            { title: '1 Stars', value: '1-stars' },
+          ],
+          layout: 'radio',
         },
-        // {
-        //     name: 'traveller',
-        //     title: 'Traveller',
-        //     type: 'traveller',
-        // },
-        { 
-            name: 'rating',
-            title: 'Rating',
-            type: 'string',
-            options: {
-                list: [
-                    { title: '5 Starts', value: '5-starts'},
-                    { title: '4 Starts', value: '4-starts'},
-                    { title: '3 Starts', value: '3-starts'},
-                    { title: '2 Starts', value: '2-starts'},
-                    { title: '1 Starts', value: '1-starts'}
-                ],
-                layout: 'radio'
-            }
-        }
-    ]
-}
+      },
+    ],
+    preview: {
+      select: { title: 'property', rating: 'rating' },
+    },
+  }
+  
+  

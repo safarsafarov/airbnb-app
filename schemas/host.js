@@ -2,5 +2,5 @@ export default {
     name: 'host',
     title: 'Host',
     type: 'reference',
-    to: [{ type: 'person'}]
-}
+    to: [{ type: 'person' }],
+  }
